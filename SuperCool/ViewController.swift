@@ -10,6 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+  
+    
+    
+    @IBOutlet weak var greenButton: UIButton!
+    @IBOutlet weak var redScreen: UIImageView!
+    @IBOutlet weak var greenScreen: UIImageView!
+    
+    
+    @IBOutlet weak var redButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -20,6 +30,26 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func greenButtonPressed(sender: AnyObject) {
+        
+            greenScreen.hidden = false
+            redScreen.hidden = true
+            greenButton.hidden = true
+            redButton.hidden = false
+            
+        
+}
+
+    
+    @IBAction func redButtonPressed(sender: AnyObject) {
+        
+       
+        redScreen.hidden = false
+        greenButton.hidden = false
+        redButton.hidden = true
+    }
+   
+    
 
 }
 
